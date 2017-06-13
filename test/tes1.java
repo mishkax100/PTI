@@ -30,7 +30,6 @@ public class tes1 {
             }
             conn.close();
         } catch (SQLException ex) {
-//            System.out.println("messages: " + ex.getMessage());
         }
         
         try {

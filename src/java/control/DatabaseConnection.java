@@ -6,10 +6,10 @@ import java.sql.SQLException;
 public class DatabaseConnection {
 //    private Statement statement;
 
-    static String  jdbcURL = "jdbc:oracle:thin:@localhost:1521:xe";
-    static String user = "pti";
-    static String password = "bngatez2";
-    static Connection connection = null;
+    String  jdbcURL = "jdbc:oracle:thin:@localhost:1521:xe";
+    String user = "pti";
+    String password = "bngatez2";
+     Connection connection = null;
     
     public DatabaseConnection() {
         try {
@@ -23,12 +23,10 @@ public class DatabaseConnection {
     }
 
     public boolean isConnected() {
-         connection = null;
         return connection != null;
     }
     public void close(){
         try {
-            connection = null;
             connection.close();
         } catch (SQLException ex) {
             
