@@ -5,8 +5,8 @@ import java.sql.SQLException;
 
 public class DatabaseConnection {
     private String jdbcURL = "jdbc:oracle:thin:@localhost:1521:xe";
-    private String user = "pti";
-    private String password = "bngatez2";
+    private String user = "hr";
+    private String password = "oracle";
     private Connection connection = null;
 //    private Statement statement;
 
@@ -82,5 +82,9 @@ public class DatabaseConnection {
             statement.close();
         } catch (Exception ex) {
         }
+    }
+    public static void main(String[] args) {
+           DatabaseConnection conn= new DatabaseConnection();
+        conn.getConnection();
     }
 }
