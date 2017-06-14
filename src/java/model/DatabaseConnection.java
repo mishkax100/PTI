@@ -83,8 +83,4 @@ public class DatabaseConnection {
         } catch (Exception ex) {
         }
     }
-    public static void main(String[] args) {
-           DatabaseConnection conn= new DatabaseConnection();
-        conn.getConnection();
-    }
 }

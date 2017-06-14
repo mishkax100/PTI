@@ -15,7 +15,7 @@ import control.ControlLogin;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-public class tes1 {
+public class login {
     public static void main(String[] args) {
 //        DatabaseConnection conn= new DatabaseConnection();
 //        conn.getConnection();
@@ -33,7 +33,7 @@ public class tes1 {
 //        }
 //        
         try {
-            if(!ControlLogin.CekLogin("145314087", "ini password").equals("")){
+            if(!ControlLogin.CekLogin("14514090", "123456").equals("")){
                 System.out.println("login lu");
             }else{
                 System.out.println("gak login lu");
@@ -41,7 +41,7 @@ public class tes1 {
             
             
         } catch (SQLException ex) {
-            Logger.getLogger(tes1.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
