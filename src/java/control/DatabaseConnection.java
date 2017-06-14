@@ -16,7 +16,7 @@ public class DatabaseConnection {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             connection = DriverManager.getConnection(jdbcURL, user, password);
 
-            System.out.println("koneksi berhasil");
+//            System.out.println("koneksi berhasil");
         } catch (Exception ex) {
             System.out.println("message: " + ex.getMessage());
         }
