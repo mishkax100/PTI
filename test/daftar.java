@@ -18,9 +18,8 @@ public class daftar {
     
     public static void main(String[] args) {
         Pengarang peng=new Pengarang();
-        
-        peng.setId_pengarang("14514090");
-        peng.setNama("apem");
+        peng.setId_pengarang("145314004");
+        peng.setNama("coba1");
         peng.setPassword("123456");
         peng.setProdi("TI");
         peng.setEmail("apem@gmail.com");
@@ -31,7 +30,7 @@ public class daftar {
         peng.setH_index("3");
         
         try {
-            ControlDaftar.DaftarPengarang(peng);
+            controlAkun.daftarPengarang(peng);
         } catch (SQLException ex) {
             Logger.getLogger(daftar.class.getName()).log(Level.SEVERE, null, ex);
         }

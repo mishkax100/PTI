@@ -11,7 +11,7 @@
 import java.sql.ResultSet;
 import java.sql.Statement;
 import control.DatabaseConnection;
-import control.ControlLogin;
+import control.*;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -33,7 +33,7 @@ public class login {
 //        }
 //        
         try {
-            if(!ControlLogin.CekLogin("14514090", "123456").equals("")){
+            if(!controlAkun.cekLogin("145314004", "123456").equals("")){
                 System.out.println("login lu");
             }else{
                 System.out.println("gak login lu");

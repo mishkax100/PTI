@@ -16,7 +16,7 @@ public class LPPM {
     private String TTL;
     private String email;
     private String jenis_kelamin;
-    private int no_telp;
+    private String no_telp;
     private String alamat;
 
     public String getPassword() {
@@ -59,11 +59,11 @@ public class LPPM {
         this.jenis_kelamin = jenis_kelamin;
     }
 
-    public int getNo_telp() {
+    public String getNo_telp() {
         return no_telp;
     }
 
-    public void setNo_telp(int no_telp) {
+    public void setNo_telp(String no_telp) {
         this.no_telp = no_telp;
     }
 
