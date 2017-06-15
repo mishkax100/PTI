@@ -16,8 +16,8 @@ public class Pengarang {
     private String password;
     private String email;
     private String status;
-    private int h_index;
-    private int no_telp;
+    private String h_index;
+    private String no_telp;
     private String TTL;
     private String prodi;
     private String alamat;
@@ -70,19 +70,19 @@ public class Pengarang {
         this.status = status;
     }
 
-    public int getH_index() {
+    public String getH_index() {
         return h_index;
     }
 
-    public void setH_index(int h_index) {
+    public void setH_index(String h_index) {
         this.h_index = h_index;
     }
 
-    public int getNo_telp() {
+    public String getNo_telp() {
         return no_telp;
     }
 
-    public void setNo_telp(int no_telp) {
+    public void setNo_telp(String no_telp) {
         this.no_telp = no_telp;
     }
 
