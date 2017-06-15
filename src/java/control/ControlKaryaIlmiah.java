@@ -33,6 +33,8 @@ public class ControlKaryaIlmiah {
             String nama_penerbit = kai.getNama_penerbit();
             String pembiaya = kai.getPembiaya();
             double jumlah_biaya = kai.getBiaya();
+            String id_karya = kai.getId_karyailmiah();
+            
                      
         Connection conn;
         DatabaseConnection database = new DatabaseConnection();        
@@ -42,10 +44,10 @@ public class ControlKaryaIlmiah {
             conn = database.getConnection();                       
             stmt = conn.prepareStatement("INSERT INTO karya_ilmiah (judul, tgl_upload, abstrak, "
                     + "disiplin_ilmu, tipe_jurnal, volume, tahun_terbit, nama_jurnal"
-                    + ", nama_penerbit, pembiaya, jumlah_biaya) VALUES "
+                    + ", nama_penerbit, pembiaya, jumlah_biaya, id_karyailmiah) VALUES "
                     + "('" +judul+ "','" +tglupload+"','"+abstrak+ "','" +disiplin_ilmu+ "',"
                     + "'"+tipe_jurnal+"','" +volume+ "','" +tahun_terbit+ "','" +nama_jurnal+ 
-                    "','" +nama_penerbit+ "','" +pembiaya+ "','" +jumlah_biaya+ "')");
+                    "','" +nama_penerbit+ "','" +pembiaya+ "','" +jumlah_biaya+ "','" +id_karya+"')");
                  
             stmt.executeUpdate();
             conn.close();
@@ -64,9 +66,8 @@ public class ControlKaryaIlmiah {
        
         String sql = "select judul, tgl_upload, abstrak, "
                     + "disiplin_ilmu, tipe_jurnal, volume, tahun_terbit, nama_jurnal"
-                    + ", nama_penerbit, pembiaya, jumlah_biaya"
-                + "from karya_ilmiah";
-        
+                    + ", nama_penerbit, pembiaya, jumlah_biaya, id_karyailmiah, nama_pengarang from karya_ilmiah";
+        psmt=conn.prepareStatement(sql);
         rset = psmt.executeQuery();
         List <Karya_ilmiah> ka= new ArrayList<>();
         while (rset.next()){
@@ -82,9 +83,13 @@ public class ControlKaryaIlmiah {
             a.setNama_penerbit(rset.getString(9));
             a.setPembiaya(rset.getString(10));
             a.setBiaya(rset.getDouble(11));
+            a.setId_karyailmiah(rset.getString(12));          
             ka.add(a);
         }
+        
         conn.commit();
+        psmt.close();
+        conn.close();
         return ka;
     }
               
@@ -101,6 +106,7 @@ public class ControlKaryaIlmiah {
         test.setNama_penerbit("Gramedia");
         test.setPembiaya("Rudi Hatmoko");
         test.setBiaya(350000);
+        test.setId_karyailmiah("HR201");       
         try {
             TambahKaryaIlmiah(test);
         } catch (SQLException ex) {

@@ -18,7 +18,7 @@ public class daftar {
     
     public static void main(String[] args) {
         Pengarang peng=new Pengarang();
-        peng.setId_pengarang("145314004");
+        peng.setId_pengarang("123456");
         peng.setNama("coba1");
         peng.setPassword("123456");
         peng.setProdi("TI");

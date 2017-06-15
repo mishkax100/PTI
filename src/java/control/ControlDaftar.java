@@ -39,7 +39,7 @@ public class ControlDaftar {
             stmt.setString(8, pengarang.getTTL());
             stmt.setString(9, pengarang.getStatus());
             stmt.setString(10, pengarang.getAlamat());
-            stmt.setString(11, pengarang.getH_index());
+            stmt.setInt(11, pengarang.getH_index());
             stmt.executeUpdate();
 
             stmt.close();

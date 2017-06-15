@@ -10,7 +10,7 @@ package model;
  * @author Bona
  */
 public class Karya_ilmiah {
-    private String id_dokumen;
+    private String id_karyailmiah;
     private String judul;
     private String tgl_upload;
     private String abstrak;
@@ -22,13 +22,14 @@ public class Karya_ilmiah {
     private int volume;
     private String pembiaya;
     private double biaya;
+    
 
-    public String getId_dokumen() {
-        return id_dokumen;
+    public String getId_karyailmiah() {
+        return id_karyailmiah;
     }
 
-    public void setId_dokumen(String id_dokumen) {
-        this.id_dokumen = id_dokumen;
+    public void setId_karyailmiah(String id_karyailmiah) {
+        this.id_karyailmiah = id_karyailmiah;
     }
 
     public String getJudul() {
@@ -118,6 +119,8 @@ public class Karya_ilmiah {
     public void setBiaya(double biaya) {
         this.biaya = biaya;
     }
+
+   
 
    
 }
