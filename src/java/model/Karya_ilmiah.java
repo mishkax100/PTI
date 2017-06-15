@@ -21,7 +21,7 @@ public class Karya_ilmiah {
     private String tipe_jurnal;
     private int volume;
     private String pembiaya;
-    private int biaya;
+    private double biaya;
 
     public String getId_dokumen() {
         return id_dokumen;
@@ -111,12 +111,13 @@ public class Karya_ilmiah {
         this.pembiaya = pembiaya;
     }
 
-    public int getBiaya() {
+    public double getBiaya() {
         return biaya;
     }
 
-    public void setBiaya(int biaya) {
+    public void setBiaya(double biaya) {
         this.biaya = biaya;
     }
-    
+
+   
 }

@@ -7,8 +7,8 @@ public class DatabaseConnection {
 //    private Statement statement;
 
     String  jdbcURL = "jdbc:oracle:thin:@localhost:1521:xe";
-    String user = "pti";
-    String password = "bngatez2";
+    String user = "hr";
+    String password = "oracle";
      Connection connection = null;
     
     public DatabaseConnection() {
